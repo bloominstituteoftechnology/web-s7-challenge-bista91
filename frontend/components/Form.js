@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import * as Yup from "yup"
-import axios from 'axios'
+import React, { useEffect, useState } from "react";
+import * as Yup from "yup";
+import axios from "axios";
 
 // 👇 Here are the validation errors you will use with Yup.
 const validationErrors = {
@@ -97,7 +97,7 @@ export default function Form() {
     axios
     .post("http://localhost:9009/api/order", {
      ...formValue,
-     toppings: Array.form(formValue.toppings), //ensure topping is an array
+     toppings: Array.from(formValue.toppings), //ensure topping is an array
     })
     .then((res) => {
         setFormValue({ fullName: "", size: "", toppings: [] });

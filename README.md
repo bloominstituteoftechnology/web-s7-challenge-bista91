@@ -93,12 +93,13 @@ Here are some **invalid** payloads (test in Postman!):
 **Inside the [App.js](./frontend/components/App.js) module:**
 
 - Inside the `nav`, render two `NavLinks`:
-    1. One with text content **Home** that navigates to "/".
-    2. One with text content **Order** that navigates to "/order".
+
+  1. One with text content **Home** that navigates to "/".
+  2. One with text content **Order** that navigates to "/order".
 
 - Below the `nav`, render a `Routes` element containing two `Route` elements:
-    1. When the path is "/" it renders `<Home />`.
-    2. When the path is "/order" it renders `<Form />`.
+  1. When the path is "/" it renders `<Home />`.
+  2. When the path is "/order" it renders `<Form />`.
 
 **Inside the [Home.js](./frontend/components/Home.js) module:**
 
@@ -131,7 +132,7 @@ Also **do not create accidental duplicates** of elements:
 
 ```js
 // this FAILS if more than one element on the page has the text content "hurrah"
-const element = screen.queryByText('hurrah')
+const element = screen.queryByText("hurrah");
 ```
 
 ## FAQ
